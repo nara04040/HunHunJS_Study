@@ -181,9 +181,6 @@ nav {
 }
 
 
-show-links {
-    height: 100rem;
-}
 
 @media screen and (max-width: 900px) {
  .links {
@@ -224,4 +221,8 @@ show-links {
  .nav-toggle:hover {
     transform: rotate(90deg);
  }
+}
+
+.show-links {
+    height: 100rem;
 }
