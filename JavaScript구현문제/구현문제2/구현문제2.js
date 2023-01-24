@@ -20,13 +20,17 @@ buttons.forEach((btn) => {
 
     if (classNames.contains("decrease")) {
       --count;
-      counterValue.style.color = "red";
+      if (count < 0) {
+        counterValue.style.color = "red";
+      }
     } else if (classNames.contains("reset")) {
       count = 0;
       counterValue.style.color = "black";
     } else {
       ++count;
-      counterValue.style.color = "blue";
+      if (count > 0) {
+        counterValue.style.color = "blue";
+      }
     }
     counterValue.textContent = count;
   });
