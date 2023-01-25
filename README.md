@@ -7,7 +7,7 @@
 <br>
 
 [학습자료](https://dingco.notion.site/dingco/Javascript-030e34c8d4b54f7a860f3691b75e315a)
-
+[학습자료](https://www.vanillajavascriptprojects.com/)
 <br>
 
 <img src="./진도표.png">
