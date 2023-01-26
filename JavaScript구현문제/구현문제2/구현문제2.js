@@ -10,31 +10,31 @@
 // ============================================================
 // querySelectorAll 사용
 
-const buttons = document.querySelectorAll(".btn");
-const counterValue = document.querySelector("#value");
-let count = 0;
+// const buttons = document.querySelectorAll(".btn");
+// const counterValue = document.querySelector("#value");
+// let count = 0;
 
-buttons.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    const classNames = e.currentTarget.classList;
+// buttons.forEach((btn) => {
+//   btn.addEventListener("click", (e) => {
+//     const classNames = e.currentTarget.classList;
 
-    if (classNames.contains("decrease")) {
-      --count;
-      if (count < 0) {
-        counterValue.style.color = "red";
-      }
-    } else if (classNames.contains("reset")) {
-      count = 0;
-      counterValue.style.color = "black";
-    } else {
-      ++count;
-      if (count > 0) {
-        counterValue.style.color = "blue";
-      }
-    }
-    counterValue.textContent = count;
-  });
-});
+//     if (classNames.contains("decrease")) {
+//       --count;
+//       if (count < 0) {
+//         counterValue.style.color = "red";
+//       }
+//     } else if (classNames.contains("reset")) {
+//       count = 0;
+//       counterValue.style.color = "black";
+//     } else {
+//       ++count;
+//       if (count > 0) {
+//         counterValue.style.color = "blue";
+//       }
+//     }
+//     counterValue.textContent = count;
+//   });
+// });
 
 // ========================================================
 
@@ -67,3 +67,39 @@ buttons.forEach((btn) => {
 // increaseBtn.addEventListener("click", increase);
 
 // // 1. currentTarget
+
+// =====================================================
+
+// const decreaseBtn = document.querySelector(".decrease");
+// const resetBtn = document.querySelector(".reset");
+// const increaseBtn = document.querySelector(".increase");
+// const value = document.querySelector("#value");
+
+// let increase = function (num) {
+//   return ++num;
+// };
+
+// let decrease = function (num) {
+//   return --num;
+// };
+
+// let predicates = { increase, decrease };
+
+// function makeCounter(predicates) {
+//   let num = 0;
+
+//   return function () {
+//     num = predicates(num);
+//     return num;
+//   };
+// }
+
+// let increaser = makeCounter(predicates.increase);
+// let decreaser = makeCounter(predicates.decrease);
+// increaseBtn.addEventListener("click", () => {
+//   value.textContent = increaser();
+// });
+
+// decreaseBtn.addEventListener("click", () => {
+//   value.textContent = decrease();
+// });
